@@ -825,66 +825,66 @@
  <resources/>
  <connections>
   <connection>
-   <sender>closeButton</sender>
-   <signal>clicked()</signal>
-   <receiver>GBCWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>418</x>
-     <y>260</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>425</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>CLEAR</sender>
-   <signal>clicked()</signal>
+   <signal>released()</signal>
    <receiver>NUM1</receiver>
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>218</x>
-     <y>34</y>
+     <x>202</x>
+     <y>44</y>
     </hint>
     <hint type="destinationlabel">
-     <x>117</x>
+     <x>124</x>
      <y>44</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>CLEAR</sender>
-   <signal>clicked()</signal>
+   <signal>released()</signal>
    <receiver>NUM2</receiver>
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>238</x>
-     <y>41</y>
+     <x>263</x>
+     <y>48</y>
     </hint>
     <hint type="destinationlabel">
-     <x>358</x>
-     <y>42</y>
+     <x>362</x>
+     <y>52</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>CLEAR_OP</sender>
-   <signal>clicked()</signal>
+   <signal>released()</signal>
    <receiver>RES</receiver>
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>62</x>
+     <x>72</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>136</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>closeButton</sender>
+   <signal>released()</signal>
+   <receiver>GBCWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>415</x>
      <y>252</y>
     </hint>
     <hint type="destinationlabel">
-     <x>134</x>
-     <y>252</y>
+     <x>421</x>
+     <y>287</y>
     </hint>
    </hints>
   </connection>
@@ -892,15 +892,15 @@
    <sender>NUM1</sender>
    <signal>textChanged(QString)</signal>
    <receiver>GBCWindow</receiver>
-   <slot>ToUpper()</slot>
+   <slot>toUpper()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>39</x>
-     <y>47</y>
+     <x>21</x>
+     <y>49</y>
     </hint>
     <hint type="destinationlabel">
-     <x>14</x>
-     <y>96</y>
+     <x>21</x>
+     <y>98</y>
     </hint>
    </hints>
   </connection>
@@ -908,31 +908,223 @@
    <sender>NUM2</sender>
    <signal>textChanged(QString)</signal>
    <receiver>GBCWindow</receiver>
-   <slot>ToUpper()</slot>
+   <slot>toUpper()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>442</x>
-     <y>42</y>
+     <x>387</x>
+     <y>48</y>
     </hint>
     <hint type="destinationlabel">
-     <x>475</x>
-     <y>105</y>
+     <x>387</x>
+     <y>106</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>NUM1</sender>
-   <signal>textChanged(QString)</signal>
+   <sender>BASECONV</sender>
+   <signal>released()</signal>
    <receiver>GBCWindow</receiver>
-   <slot>validate()</slot>
+   <slot>buttonConvertBase()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>37</x>
-     <y>44</y>
+     <x>230</x>
+     <y>97</y>
     </hint>
     <hint type="destinationlabel">
-     <x>174</x>
-     <y>50</y>
+     <x>230</x>
+     <y>140</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BASE</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>GBCWindow</receiver>
+   <slot>changeOpBase()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>253</x>
+     <y>277</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ADD</sender>
+   <signal>released()</signal>
+   <receiver>GBCWindow</receiver>
+   <slot>buttonAdd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>64</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>100</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SUBTRACT</sender>
+   <signal>released()</signal>
+   <receiver>GBCWindow</receiver>
+   <slot>buttonSubtract()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>139</x>
+     <y>129</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>140</x>
+     <y>104</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MULTIPLY</sender>
+   <signal>released()</signal>
+   <receiver>GBCWindow</receiver>
+   <slot>buttonMultiply()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>326</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>326</x>
+     <y>100</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DIVIDE</sender>
+   <signal>released()</signal>
+   <receiver>GBCWindow</receiver>
+   <slot>buttonDivide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>439</x>
+     <y>122</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>438</x>
+     <y>98</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>XOR</sender>
+   <signal>released()</signal>
+   <receiver>GBCWindow</receiver>
+   <slot>buttonXor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>38</x>
+     <y>183</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>36</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>OR</sender>
+   <signal>released()</signal>
+   <receiver>GBCWindow</receiver>
+   <slot>buttonOr()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>91</x>
+     <y>180</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>107</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AND</sender>
+   <signal>released()</signal>
+   <receiver>GBCWindow</receiver>
+   <slot>buttonAnd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>175</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>190</x>
+     <y>205</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>NOT</sender>
+   <signal>released()</signal>
+   <receiver>GBCWindow</receiver>
+   <slot>buttonNot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>247</x>
+     <y>177</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>302</x>
+     <y>222</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>NAND</sender>
+   <signal>released()</signal>
+   <receiver>GBCWindow</receiver>
+   <slot>buttonNand()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>318</x>
+     <y>182</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>204</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>NOR</sender>
+   <signal>released()</signal>
+   <receiver>GBCWindow</receiver>
+   <slot>buttonNor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>365</x>
+     <y>190</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>369</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>XNOR</sender>
+   <signal>released()</signal>
+   <receiver>GBCWindow</receiver>
+   <slot>buttonXor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>407</x>
+     <y>181</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>396</x>
+     <y>184</y>
     </hint>
    </hints>
   </connection>
@@ -955,7 +1147,19 @@
   </property>
  </designerdata>
  <slots>
-  <slot>ToUpper()</slot>
-  <slot>validate()</slot>
+  <slot>toUpper()</slot>
+  <slot>buttonConvertBase()</slot>
+  <slot>buttonAdd()</slot>
+  <slot>buttonSubtract()</slot>
+  <slot>buttonMultiply()</slot>
+  <slot>buttonDivide()</slot>
+  <slot>buttonXor()</slot>
+  <slot>buttonOr()</slot>
+  <slot>buttonAnd()</slot>
+  <slot>buttonNot()</slot>
+  <slot>buttonNand()</slot>
+  <slot>buttonNor()</slot>
+  <slot>buttonXnor()</slot>
+  <slot>changeOpBase()</slot>
  </slots>
 </ui>
